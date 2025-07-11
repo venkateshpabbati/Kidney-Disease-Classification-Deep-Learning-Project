@@ -74,7 +74,8 @@ def predict_image():
         return jsonify({"prediction": classes[prediction]}), 200
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        logger.error(f"An error occurred: {str(e)}")
+        return jsonify({"error": "An internal error has occurred."}), 500
 
 
 @app.route('/', methods=['GET'])
