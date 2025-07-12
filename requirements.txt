@@ -1,23 +1,31 @@
-# tensorflow==2.12.0
-pandas 
-# dvc
-# mlflow==2.5.0
-notebook
+# Data Science
+pandas
 numpy
+scipy
 matplotlib
 seaborn
-python-box==6.0.2
-pyYAML
 tqdm
-ensure==1.0.2
 joblib
+
+# Deep Learning
+torch
+torchvision
+timm
+
+# Utilities
+python-box
+pyyaml
 types-PyYAML
-scipy
+ensure
+gdown
+
+# Web & API
 Flask
 Flask-Cors
-gdown
-torchvision
-torch
-timm
 gunicorn
+
+# Notebook
+notebook
+
+# Editable install of local package
 -e .
