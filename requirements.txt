@@ -8,6 +8,7 @@ tqdm
 joblib
 
 # Deep Learning
+tensorflow
 torch
 torchvision
 timm
