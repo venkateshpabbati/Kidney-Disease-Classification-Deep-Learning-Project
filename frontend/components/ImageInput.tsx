@@ -12,11 +12,15 @@ const ImageInput: FC = () => {
 
   const handleFileChange = (event: any) => {
     const file = event.target.files[0];
-    if (file && file.type.substr(0, 5) === "image") {
+    const allowedImageTypes = ["image/png", "image/jpeg", "image/gif", "image/svg+xml"];
+
+    if (file && allowedImageTypes.includes(file.type)) {
       setImage(file);
-      setPreview(URL.createObjectURL(file));
+      const objectUrl = URL.createObjectURL(file);
+      setPreview(objectUrl);
     } else {
       setImage(null);
+      setPreview(""); // Reset preview for invalid files
     }
   };
 
