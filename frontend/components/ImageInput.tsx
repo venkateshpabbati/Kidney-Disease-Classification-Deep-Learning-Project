@@ -12,7 +12,7 @@ const ImageInput: FC = () => {
 
   const handleFileChange = (event: any) => {
     const file = event.target.files[0];
-    const allowedImageTypes = ["image/png", "image/jpeg", "image/gif", "image/svg+xml"];
+    const allowedImageTypes = ["image/png", "image/jpeg", "image/gif"];
 
     if (file && allowedImageTypes.includes(file.type)) {
       setImage(file);
